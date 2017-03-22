@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class ProfileActivity extends AppCompatActivity {
@@ -31,6 +32,10 @@ public class ProfileActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getTitle().equals("Editar Nombre")){
+            TextView txtChange= (TextView)findViewById(R.id.str_txt_name);
+            txtChange.setText("Nombre Keneth");
+        }
         return super.onOptionsItemSelected(item);
     }
 }
