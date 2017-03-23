@@ -35,7 +35,8 @@ public class ProfileActivity extends AppCompatActivity {
         if (item.getTitle().equals("Editar Nombre")){
             TextView txtChange= (TextView)findViewById(R.id.str_txt_name);
             txtChange.setText("Nombre Keneth");
+            return true;
         }
-        return super.onOptionsItemSelected(item);
+         return super.onOptionsItemSelected(item);
     }
 }
