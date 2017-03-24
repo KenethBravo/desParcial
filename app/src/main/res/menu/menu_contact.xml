@@ -8,7 +8,7 @@
         />
 
     <item
-        android:id="@+id/itm_menu__return"
+        android:id="@+id/itm_menu_return"
         android:title="@string/str_menu_return"
         android:orderInCategory="2"
         />

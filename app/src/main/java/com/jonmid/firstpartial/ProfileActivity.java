@@ -40,7 +40,7 @@ public class ProfileActivity extends AppCompatActivity {
                 TextView txtChange = (TextView) findViewById(R.id.str_txt_name);
                 txtChange.setText("Nombre Keneth");
                 return true;
-            case R.id.itm_menu__return:
+            case R.id.itm_menu_return:
                 Intent intent = new Intent(this, ListContactActivity.class);
                 startActivity(intent);
                 return true;
