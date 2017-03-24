@@ -1,10 +1,12 @@
 package com.jonmid.firstpartial;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,11 +34,18 @@ public class ProfileActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getTitle().equals("Editar Nombre")){
-            TextView txtChange= (TextView)findViewById(R.id.str_txt_name);
-            txtChange.setText("Nombre Keneth");
-            return true;
+
+        switch (item.getItemId()) {
+            case R.id.itm_menu_change_contact:
+                TextView txtChange = (TextView) findViewById(R.id.str_txt_name);
+                txtChange.setText("Nombre Keneth");
+                return true;
+            case R.id.itm_menu__return:
+                Intent intent = new Intent(this, ListContactActivity.class);
+                startActivity(intent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
-         return super.onOptionsItemSelected(item);
     }
 }
